@@ -92,3 +92,19 @@ for (i = 0; i < dotsNew.length; i++) {
 slidesNew[slideIndexNew-1].style.display = "flex";
 dotsNew[slideIndexNew-1].className += " active";
 }
+
+const accordions = document.querySelectorAll('.accordion-item');
+
+for (item of accordions) {
+    item.addEventListener('click', function() {
+        if(this.classList.contains('able')) {
+            this.classList.remove('able');
+        } else {
+            for (el of accordions) {
+                el.classList.remove('able');
+            }
+            this.classList.add('able');
+        }
+        }
+    )
+}

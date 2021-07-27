@@ -99,6 +99,7 @@ body {
     font-size: 15px;
     line-height: 28px;
     color: #8D96BD;
+    max-width: 413px;
 }
 .button-group-apps {
     margin-top: 47px;
@@ -456,12 +457,12 @@ body {
 }
 .cloud-3 {
     position: absolute;
-    left: 1085px;
+    right: 498px;
     top: 445px;
 }
 .cloud-4 {
     position: absolute;
-    left: 1208px;
+    right: 375px;
     top: 17px;
 }
 .cloud-5 {
@@ -739,3 +740,98 @@ body {
 .active, .dot-2:hover {
     background-color: #5283FF;
 }
+.faq {
+    padding-top: 176px;
+    padding-bottom: 174px;
+}
+.accordion-wrapper {
+    max-width: 743px;
+    margin: auto;
+}
+.accordion-item {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #8E96B7;
+}
+.accordion-item-title {
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: #495274;
+    font-weight: bold;
+    padding: 17px 0;
+    cursor: pointer;
+    padding-left: 30px;
+    position: relative;
+}
+.arrow-down {
+    margin-right: 24px;
+}
+.accordion-item-title::before {
+    content: "+";
+    position: absolute;
+    left: 5px;
+    font-size: 24px;
+
+}
+.accordion-item-content {
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+    color: #8D96BD;
+}
+.accordion-item-content-link {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #7382A3;
+    padding: 13px 15px;
+    text-decoration: none;
+    background: #E8ECF4;
+    border-radius: 2px;
+    display: inline-block;
+}
+.accordion-item-content-text {
+    font-size: 14px;
+    line-height: 27px;
+    letter-spacing: 0.03em;
+    max-width: 391px;
+    margin: 0;
+    display: inline-block;
+    margin-bottom: 17px;
+}
+.accordion-item.able .accordion-item-content {
+    transition: .5s ease-in-out;
+    height: 150px;
+}
+
+.accordion-item.able .accordion-item-title::before {
+    content: "-";
+}
+.accordion-text {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #3D4F9F;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 0;
+}
+.accordion-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #3D4F9F;
+    margin-top: 0;
+    margin-bottom: 68px;
+}
+
+
+
