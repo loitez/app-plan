@@ -195,7 +195,7 @@ body {
     font-weight: 500;
     color: #3D4F9F;
     margin-top: 0;
-    margin-bottom: 92px;
+    margin-bottom: 32px;
 }
 .features {
     max-width: 140px;
@@ -229,7 +229,8 @@ body {
     height: 102px;
     margin-top: 0;
     line-height: 19px;
-    margin-bottom: 92px;
+    margin-bottom: 32px;
+    font-size: 13px;
 }
 
 .features h5 {
@@ -239,7 +240,7 @@ body {
     display: flex;
     align-content: center;
     justify-content: space-between;
-    padding-bottom: 172px;
+    padding-bottom: 81px;
 }
 .button-read-more {
     padding: 13px 16px;
@@ -569,7 +570,7 @@ body {
     position: relative;
     margin: auto;
     background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
-    padding-bottom: 15px;
+    padding-bottom: 90px;
 }
 
 /* Hide the images by default */
