@@ -42,8 +42,12 @@ body {
 .button-svg:not(:last-child) {
     margin-right: 37px;
 }
+.button-svg path {
+    transition: .2s ease;
+}
 .button-svg:hover path {
     fill: #5982E7;
+    transition: .2s ease;
 
 }
 .button-svg:last-child {
@@ -55,6 +59,7 @@ body {
     padding: 13px 16px;
     font-weight: 700;
     text-decoration: none;
+    transition: .2s ease;
 }
 .button-primary:hover {
     color: #fff;
@@ -72,8 +77,12 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+.customers-svg path {
+    transition: .2s ease;
+}
 .customers-svg:hover path {
     fill: #5982E7;
+    transition: .2s ease;
 }
 .apps {
     background-color: #F5F8FF;
@@ -148,6 +157,24 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+.read-about {
+    position: relative;
+}
+.clouds-white-bottom {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+}
+.clouds-white-right {
+    position: absolute;
+    right: 80px;
+    top: 90px;
+}
+.clouds-white-top {
+    position: absolute;
+    top: 40px;
+    left: 200px;
+}
 .read-about-app {
     display: flex;
     flex-direction: column;
@@ -179,7 +206,7 @@ body {
     text-align: center;
     color: #ADB3CB;
     font-size: 11px;
-    margin-right: 25px;
+    padding: 15px;
     //**font-weight: 600;
     font-family: 'Open Sans', sans-serif;**//
 }
@@ -188,7 +215,7 @@ body {
 .files,
 .meeting-chats,
 .save-events {
-    font-size: 14px;
+    font-size: 16px;
     color: #4074F8;
     margin-top: 0;
     margin-bottom: 25px;
@@ -221,6 +248,7 @@ body {
     text-decoration: none;
     font-weight: 700;
     margin-right: 17px;
+    transition: .2s ease;
 }
 .button-read-more:hover {
     color: #FFD7D7;
@@ -296,18 +324,35 @@ body {
 }
 .get-started {
     background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+    position: relative;
 }
 .get-started-now {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding-top: 91px;
+    padding-bottom: 91px;
+}
+.clouds-blue-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 130px;
+}
+.clouds-blue-top {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+.clouds-blue-right {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
 }
 .plan {
     font-size: 10px;
     font-weight: 500;
     color: white;
-    padding-top: 91px;
     margin-bottom: 16px;
 }
 .button-view-pricing,
@@ -353,9 +398,6 @@ body {
     box-shadow: 0 5px 15px #6480E8;
     color: #565F82;
     border: 1px solid #ffffff;
-}
-.button-group-get-started {
-    padding-bottom: 91px;
 }
 .sign {
     background-color: #FCFDFF;
@@ -403,6 +445,12 @@ body {
     max-height: 59px;
     white-space: nowrap;
     border: none;
+    transition: .2s ease;
+}
+.button-save-me:hover {
+    background-color: white;
+    color: #4D6CE1;
+    transition: .2s ease;
 }
 .input-email {
     margin-right: 14px;
@@ -429,9 +477,12 @@ body {
 .slider-item-1 {
     background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%),
     url('/img/chart.png');
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 91px;
+    padding-bottom: 91px;
 }
 .slider-item-1 h5 {
     color: #3D4F9F;
@@ -458,21 +509,6 @@ body {
     color: #8D96BD;
     max-width: 502px;
     margin: auto;
-    margin-bottom: 20px;
-}
-.svg-chart {
-    position: relative;
-    padding-top: 135px;
-    width: 100%;
-    object-fit: cover;
-}
-.slider-item-1-text {
-    position: absolute;
-}
-.one-of-stats {
-    position: absolute;
-    left: 510px;
-    top: 415px;
 }
 .cloud-1 {
     position: absolute;
@@ -486,18 +522,18 @@ body {
 }
 .cloud-3 {
     position: absolute;
-    right: 498px;
-    top: 445px;
+    right: 158px;
+    bottom: 40px;
 }
 .cloud-4 {
     position: absolute;
-    right: 375px;
+    right: 105px;
     top: 17px;
 }
 .cloud-5 {
     position: absolute;
     left: 253px;
-    top: 366px;
+    bottom: 30px;
 }
 .slider-item-2 {
     width: 100%;
@@ -606,13 +642,38 @@ body {
 }
 
 /* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
+.jump {
+    -webkit-animation-name: jump;
     -webkit-animation-duration: 1.5s;
-    animation-name: fade;
+    animation-name: jump;
     animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
 }
 
+@keyframes jump {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.05,.95)   translateY(0); }
+    30%  { transform: scale(.95,1.05)   translateY(-40px); }
+    50%  { transform: scale(1,1)        translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-5px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+    0% { transform: scale(0.95); opacity: 0.7}
+    100% { transform: scale(1); opacity: 1}
+}
+
+/**
 @-webkit-keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
@@ -621,7 +682,9 @@ body {
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
-}
+}**/
+
+
 .blog {
     padding-top: 103px;
     padding-bottom: 103px;
@@ -711,6 +774,7 @@ body {
     text-decoration: none;
     margin-right: 8px;
     font-weight: bold;
+    transition: .2s ease;
 }
 .slider-blog-button-read:hover {
     color: #D2E1FF;
@@ -724,6 +788,7 @@ body {
     line-height: 16px;
     color: #A6B6DA;
     font-weight: bold;
+    transition: .2s ease;
 }
 .slider-blog-button-add:hover {
     color: #3A79FF;
@@ -833,6 +898,7 @@ body {
     background: #E8ECF4;
     border-radius: 2px;
     display: inline-block;
+    transition: .2s ease;
 }
 .accordion-item-content-link:hover {
     background-color: #7382A3;
