@@ -134,3 +134,13 @@ menuBtn.addEventListener("click", () => {
 menuCloseBtn.addEventListener("click", () => {
     menu.classList.toggle('is-open');
 });
+
+const menuBtnF = document.querySelector('.menu-button-footer');
+const menuF = document.querySelector('.navbar-panel-footer');
+const menuCloseBtnF = document.querySelector('.close-menu-footer');
+menuBtnF.addEventListener("click", () => {
+    menuF.classList.toggle('is-open');
+});
+menuCloseBtnF.addEventListener("click", () => {
+    menuF.classList.toggle('is-open');
+});
